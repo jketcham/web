@@ -62,7 +62,11 @@ header {
     font-size: .75em;
     text-align: center;
     line-height: 3em;
-    -webkit-animation-delay: .5s;
+    -webkit-animation-delay: 1s;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
     h1 {
         letter-spacing: .15em;
     }
@@ -71,11 +75,8 @@ header {
         margin: 2em auto 2em;
     }
 }
-
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.icons {
+    margin-top: 20px;
 }
 
 .ss-icon {
@@ -90,9 +91,10 @@ header h1 {
 }
 p {
     font-size: 2em;
+    padding: 1em;
 }
 a {
-    color: #666;
+    color: $red;
     text-decoration: none;
     -webkit-transition-property: color;
     -moz-transition-property: color;
@@ -108,7 +110,7 @@ a {
     transition-timing-function: ease-in;
 }
 a:hover {
-    color: $red !important;
+    color: $dark_red !important;
 }
 
 @import "_media_queries.scss";
