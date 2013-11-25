@@ -1,0 +1,24 @@
+@media (min-width : 320px) 
+and (max-width : 568px) {
+  header {
+    h1 {
+      font-size: 3em;
+    }
+    h2 {
+      font-size: 1.5em;
+      padding: 1em;
+    }
+  }
+}
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+  header {
+    h1 {
+      font-size: 4em;
+    }
+    h2 {
+      font-size: 2em;
+      padding: 1em;
+    }
+  }
+}
