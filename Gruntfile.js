@@ -52,6 +52,19 @@ module.exports = function (grunt) {
                 ]
             },
         },
+        notify: {
+            watch: {
+                options: {
+                    title: 'Task Complete',  // optional
+                    message: 'SASS and Uglify finished running', //required
+                }
+            },
+            server: {
+                options: {
+                    message: 'Server is ready!'
+                }
+            }
+        },
         autoshot: {
             default_options: {
               options: {
@@ -467,5 +480,7 @@ module.exports = function (grunt) {
         'connect:livereload',
         'autoshot'
     ]);
+
+    grunt.loadNpmTasks('grunt-notify');
     
 };
