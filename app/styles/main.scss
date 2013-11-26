@@ -31,11 +31,11 @@ header {
 }
 #work {
     margin: 0 auto;
-    margin-bottom: 300px;
+    background-color: $red;
 }
 #contact {
     width: 100%;
-    padding: 2em 0 2em;
+    padding: 1.25em 0 2em;
     background-color: $blue_back;
     font-size: 2em;
     a {
@@ -47,14 +47,21 @@ header {
 .project {
     img {
         max-width: 400px;
+        padding: 2em;
         float: left;
     }
     p {
         padding-left: 20px;
     }
+    div:first-child {
+        float: left;
+    }
+    div:nth-child(2) {
+        float: right;
+    }
+    display: inline-block;
     margin: 0 auto;
     max-width: 900px;
-    margin-bottom: 300px;
 }
 
 .main {
