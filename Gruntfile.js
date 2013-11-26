@@ -430,6 +430,17 @@ module.exports = function (grunt) {
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
             }
+        },
+        deploy: {
+          build: {
+            auth: {
+              host: 'jackketcham.com',
+              port: 21,
+              authKey: 'key1'
+            },
+            src: 'dist/',
+            dest: '/public_html'
+          }
         }
     });
 
@@ -446,6 +457,10 @@ module.exports = function (grunt) {
             'watch'
         ]);
     });
+
+    grunt.registerTask('deploy', [
+        'deploy'
+    ]);
 
     grunt.registerTask('test', [
         'clean:server',
@@ -482,5 +497,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-ftp-deploy');
     
 };
