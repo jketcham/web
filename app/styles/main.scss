@@ -3,38 +3,126 @@
 @import "_social_icons.scss";
 @import "bootstrap";
 
+/**
+ * Globals
+ */
 body {
-  background: $white;
+  background: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   font-size: 16px;
-}
-header {
-  text-align: center;
-  min-height: 200px;
-  max-height: 300px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 footer {
   text-align: center;
 }
-.top-container {
-  background-image: url("/img/background_1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 -100px;
+h1, h2, h3,
+h4, h5, h6 {
+  color: #3d464d;
+}
+p {
+  line-height: 25px;
+}
+a {
+  color: #E27D7D;
+  transition: .3s;
+  &:hover {
+    color: #AB5D5D;
+    text-decoration: none;
+  }
+}
+
+
+/**
+ * Header
+ */
+header {
+  margin-bottom: 20px;
+  min-height: 200px;
+  max-height: 300px;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  h1, h3 {
+    color: #fff;
+  }
 }
 nav {
   margin-top: 30px;
+  font-size: 17px;
+  color: #fff;
+  a {
+    color: #fff;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+.top-container {
+  background: #E27D7D;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -100px;
+  cursor: default;
 }
 
+/**
+ * About
+ */
+.about {
+  color: #888;
+  .lead {
+    margin-top: 20px;
+    color: #3d464d;
+  }
+}
 
+/**
+ * Projects
+ */
+.project {
+  min-height: 350px;
+  padding: 20px;
+  border-radius: 4px;
+  color: #888;
+  transition: .5s;
+  cursor: default;
+  &:hover {
+    -moz-box-shadow: 0 0 46px rgba(0,0,0,0.33),inset 0 0 0 #000;
+    -webkit-box-shadow: 0 0 46px rgba(0,0,0,0.33),inset 0 0 0 #000;
+    box-shadow: 0 0 46px rgba(0,0,0,0.33),inset 0 0 0 #000;
+  }
+}
+.project-title {
+  margin-top: 0;
+  color: #3d464d;
+}
+.tags {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding-bottom: inherit;
+}
+.tag {
+  background: #6B6B6B;
+  color: #EDEDED;
+  font-size: 13px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/**
+ * Iconography
+ */
 .icons {
   margin-top: 20px;
   a {
       margin-top: .5em;
   }
 }
-
 .ss-icon {
   font-size: 2em;
 }
