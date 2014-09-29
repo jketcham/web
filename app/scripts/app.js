@@ -8,9 +8,9 @@ define([], function () {
      * @param {String} element Element to swap new words in to
      * @return {String} Word to swap in place in the element
      */
-    wordSwap: function(element) {
+    swapWord: function(element) {
       setInterval(function() {
-        var tagline_words = ['it', 'shit', 'pixels', 'coffee', 'burritos', 'hackathons', 'Javascript', 'designs', 'impromptu jam sessions', '...', 'cool stuff'];
+        var tagline_words = ['it', 'shit', 'pixels', 'code', 'experiences', 'ideas', 'dreams', 'coffee', 'burritos', 'hackathons', 'Javascript', 'designs', 'impromptu jam sessions', '...', 'cool stuff'];
         var random = Math.floor(Math.random() * tagline_words.length);
         element['innerText'] = tagline_words[random];
       }, 2000);
@@ -26,6 +26,19 @@ define([], function () {
       window.siteInfo = function() {
         console.log('This website was made using: JQuery, RequireJS, Bootstrap and swag.  Redirecting you to the GitHub repo...');
         setTimeout(window.location.replace('https://github.com/jketcham/portfolio'), 3000);
+      }
+    },
+
+    /**
+     * Get day/night for user location
+     * @return {Boolean} True if it is night, false if day
+     */
+    getNight: function() {
+      var time = (new Date().getHours());
+      if(time >= 19 || time >= 5) {
+        return true;
+      } else {
+        return false;
       }
     }
   }

@@ -13,6 +13,6 @@ require.config({
 require(['app', 'jquery'], function (app, $) {
   'use strict';
 
-  app.wordSwap(headertagline);
+  app.swapWord(headertagline);
   app.consoleSwag();
 });
