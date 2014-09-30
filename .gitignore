@@ -4,3 +4,5 @@ node_modules
 app/bower_components
 .ftppass
 .DS_Store
+/dist
+.css
