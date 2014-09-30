@@ -30,16 +30,26 @@ define([], function () {
     },
 
     /**
-     * Get day/night for user location
+     * Apply reading theme depending on user input and day/night
      * @return {Boolean} True if it is night, false if day
      */
-    getNight: function() {
-      var time = (new Date().getHours());
-      if(time >= 19 || time >= 5) {
-        return true;
-      } else {
-        return false;
+    applyReadingTheme: function() {
+      var storage = localStorage.getItem('readingTheme'),
+          doc = document.documentElement;
+
+      if(storage == 'true') {
+        doc.classList.add('dark-theme');
       }
+
+      document.querySelectorAll('.js-toggle-theme').addEventListener('click', function() {
+        if(doc.classList.contains('dark-theme')) {
+          doc.classList.remove('dark-theme');
+          localStorage.setItem('readingTheme', 'false');
+        } else {
+          doc.classList.add('dark-theme');
+          localStorage.setItem('readingTheme', 'true');
+        }
+      });
     }
   }
 });

@@ -15,4 +15,5 @@ require(['app', 'jquery'], function (app, $) {
 
   app.swapWord(headertagline);
   app.consoleSwag();
+  //app.applyReadingTheme();
 });
