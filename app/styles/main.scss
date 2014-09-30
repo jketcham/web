@@ -8,7 +8,7 @@
  */
 body {
   background: #fff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Oxygen', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -21,6 +21,7 @@ footer {
 h1, h2, h3,
 h4, h5, h6 {
   color: #3d464d;
+  font-weight: 700;
 }
 p {
   line-height: 25px;
@@ -33,7 +34,9 @@ a {
     text-decoration: none;
   }
 }
-
+section {
+  padding: 20px 0 20px 0;
+}
 
 /**
  * Header
@@ -46,6 +49,9 @@ header {
   text-rendering: optimizeLegibility;
   h1, h3 {
     color: #fff;
+  }
+  h3 {
+    font-weight: 400;
   }
 }
 nav {
@@ -73,9 +79,14 @@ nav {
 .about {
   color: #888;
   .lead {
-    margin-top: 20px;
+    font-weight: 300;
     color: #3d464d;
   }
+}
+.about-face {
+  max-width: 150px;
+  float: right;
+  border-radius: 50%;
 }
 
 /**
@@ -98,11 +109,20 @@ nav {
   margin-top: 0;
   color: #3d464d;
 }
+.project-link {
+  margin-bottom: 30px;
+}
+.project-list {
+  li {
+    margin: 5px 0 5px 0;
+  }
+}
 .tags {
   position: absolute;
   bottom: 0;
   margin: 0;
   padding-bottom: inherit;
+  overflow: auto;
 }
 .tag {
   background: #6B6B6B;
