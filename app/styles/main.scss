@@ -15,9 +15,6 @@ body {
   -moz-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-footer {
-  text-align: center;
-}
 h1, h2, h3,
 h4, h5, h6 {
   color: #3d464d;
@@ -34,8 +31,9 @@ a {
     text-decoration: none;
   }
 }
-section {
-  padding: 20px 0 20px 0;
+::selection {
+  background-color: #E27D7D;
+  color: #fff;
 }
 
 /**
@@ -54,6 +52,13 @@ header {
     font-weight: 400;
   }
 }
+#headertagline {
+  transition: .3s;
+  text-shadow: none;
+  &:hover {
+    text-shadow: 0 0 4px #fff;
+  }
+}
 nav {
   margin-top: 30px;
   font-size: 17px;
@@ -65,12 +70,53 @@ nav {
     }
   }
 }
+.nav-right {
+  a {
+    &:hover {
+      padding-bottom: 5px;
+      border-bottom: 2px solid;
+      border-color: #ccc;
+    }
+  }
+}
 .top-container {
   background: #E27D7D;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -100px;
   cursor: default;
+}
+
+/**
+ * Footer
+ */
+footer {
+  padding: 30px 0 30px 0;
+  margin-top: 40px;
+  background: #E27D7D;
+  color: #fff;
+  a {
+    color: #fff;
+    text-decoration: underline;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+.footer-copyright {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/**
+ * Sections
+ */
+section {
+  padding: 20px 0 20px 0;
+}
+.section-title {
+  margin-top: 5px;
 }
 
 /**
@@ -99,6 +145,9 @@ nav {
   color: #888;
   transition: .5s;
   cursor: default;
+  p {
+    max-width: 400px;
+  }
   &:hover {
     -moz-box-shadow: 0 0 46px rgba(0,0,0,0.33),inset 0 0 0 #000;
     -webkit-box-shadow: 0 0 46px rgba(0,0,0,0.33),inset 0 0 0 #000;
@@ -125,6 +174,7 @@ nav {
   overflow: auto;
 }
 .tag {
+  padding: 1px;
   background: #6B6B6B;
   color: #EDEDED;
   font-size: 13px;
