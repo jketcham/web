@@ -19,3 +19,11 @@ var routes = (
 );
 
 ReactDOM.render(h(Router, {history: history()}, [routes]), document.getElementById('root'));
+
+// let people know what's up
+console.log('%cWant to check out the code for this website? Type go()', 'color:red');
+
+window.go = function() {
+  window.location.href = 'https://github.com/jketcham/portfolio';
+  return 'cool!';
+}
