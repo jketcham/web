@@ -1,7 +1,8 @@
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-
 module.exports = {
-  entry: './src/js/index.js',
+  entry: [
+    './src/js/index.js',
+    './src/styles/main.less'
+  ],
 
   output: {
     path: __dirname + '/static/js',
@@ -25,14 +26,11 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.less$/,
+        loader: "style!css!autoprefixer!less"
       }
     ]
-  },
-
-  plugins: [
-    // new BrowserSyncPlugin({
-    //   host: 'localhost',
-    //   port: 8080
-    // })
-  ]
+  }
 };
