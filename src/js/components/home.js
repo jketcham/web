@@ -8,17 +8,28 @@ class Home extends React.Component {
     super(props, context);
 
     this.state = {
-      cool: true // will remove
+
     };
   }
 
   render() {
-    var { cool } = this.state;
-
     return h('div', {className: 'jk-home'}, [
-      h('h1', 'Jack Ketcham'),
-      h('p', 'is this cool?'),
-      h('strong', cool.toString())
+      h('div', {className: 'jk-info'}, [
+        h('h1', 'Jack Ketcham'),
+        h('p', 'code, photography, music'),
+        h('ul', {className: 'jk-list'}, [
+          h('li', [
+            h('a', {href: 'https://github.com/jketcham', className: 'jk-link', target: '_blank'}, 'GitHub')
+          ]),
+          h('li', [
+            h('a', {href: 'https://twitter.com/_jket', className: 'jk-link', target: '_blank'}, 'Twitter')
+          ]),
+          h('li', [
+            h('a', {href: 'https://www.flickr.com/photos/71899610@N04', className: 'jk-link', target: '_blank'}, 'Flickr')
+          ])
+        ]),
+        h('a', {href: 'mailto:jack@jackketcham.com'}, 'Email')
+      ])
     ]);
   }
 }
