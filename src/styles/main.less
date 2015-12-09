@@ -1,25 +1,144 @@
-// styles
+// stylin'
 
 * {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
+::selection {
+  background-color: #FF6E03;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #FF6E03;
+  transition: .25s;
+
+  &:visited {
+    color: #FF6E03;
+  }
+  &:hover {
+    color: #9E4300;
+  }
+}
+
+h1 {
+  font-size: 48px;
+}
+
 .root {
   position: relative;
 }
 
-.jk-home {
-  width: 25%;
-  height: 25%;
-  overflow: auto;
-  margin: auto;
+.jk-center {
+  width: 500px;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 50%;
+  left: 50%;
+  margin: -70px 0 0 -170px;
+}
+
+#name-jack {
+  float: left;
+  position: relative;
+}
+
+.jk-info__container {
+  h1 {
+    margin: 0;
+  }
+}
+
+.jk-info {
+  display: inline-block;
+  margin-left: 12px;
+  position: relative;
 }
 
 .jk-list {
+  list-style: none;
+  padding-left: 0;
   li {
     line-height: 1.5;
+  }
+}
+
+.line {
+  color: rgba(3, 160, 255, .45);
+  border: 1px solid;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(-90deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(-90deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-90deg);
+  }
+}
+
+// spin animations
+
+@keyframes spin-1 {
+  0% {
+    transform: rotate(inherit);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(inherit);
+  }
+}
+
+@keyframes spin-2 {
+  0% {
+    transform: rotate(inherit);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(inherit);
+  }
+}
+
+@keyframes spin-3 {
+  0% {
+    transform: rotate(inherit);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(inherit);
+  }
+}
+
+@keyframes spin-4 {
+  0% {
+    transform: rotate(inherit);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(inherit);
+  }
+}
+
+@keyframes spin-5 {
+  0% {
+    transform: rotate(inherit);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(inherit);
   }
 }

@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(216);
+	module.exports = __webpack_require__(217);
 
 
 /***/ },
@@ -71,7 +71,7 @@
 	ReactDOM.render(h(Router, { history: history() }, [routes]), document.getElementById('root'));
 
 	// let people know what's up
-	console.log('%cWant to check out the code for this website? Type go()', 'color:red');
+	console.log('%cWant to check out the code for this website? Type go()', 'color:#03A0FF');
 
 	window.go = function () {
 	  window.location.href = 'https://github.com/jketcham/portfolio';
@@ -24801,6 +24801,10 @@
 
 	var _reactHyperscript2 = _interopRequireDefault(_reactHyperscript);
 
+	var _lines = __webpack_require__(216);
+
+	var _lines2 = _interopRequireDefault(_lines);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24812,19 +24816,16 @@
 	var Home = (function (_React$Component) {
 	  _inherits(Home, _React$Component);
 
-	  function Home(props, context) {
+	  function Home() {
 	    _classCallCheck(this, Home);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Home).call(this, props, context));
-
-	    _this.state = {};
-	    return _this;
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Home).apply(this, arguments));
 	  }
 
 	  _createClass(Home, [{
 	    key: 'render',
 	    value: function render() {
-	      return (0, _reactHyperscript2.default)('div', { className: 'jk-home' }, [(0, _reactHyperscript2.default)('div', { className: 'jk-info' }, [(0, _reactHyperscript2.default)('h1', 'Jack Ketcham'), (0, _reactHyperscript2.default)('p', 'code, photography, music'), (0, _reactHyperscript2.default)('ul', { className: 'jk-list' }, [(0, _reactHyperscript2.default)('li', [(0, _reactHyperscript2.default)('a', { href: 'https://github.com/jketcham', className: 'jk-link', target: '_blank' }, 'GitHub')]), (0, _reactHyperscript2.default)('li', [(0, _reactHyperscript2.default)('a', { href: 'https://twitter.com/_jket', className: 'jk-link', target: '_blank' }, 'Twitter')]), (0, _reactHyperscript2.default)('li', [(0, _reactHyperscript2.default)('a', { href: 'https://www.flickr.com/photos/71899610@N04', className: 'jk-link', target: '_blank' }, 'Flickr')])]), (0, _reactHyperscript2.default)('a', { href: 'mailto:jack@jackketcham.com' }, 'Email')])]);
+	      return (0, _reactHyperscript2.default)('div', [(0, _reactHyperscript2.default)('div', { className: 'jk-center' }, [(0, _reactHyperscript2.default)('div', { className: 'jk-info__container' }, [(0, _reactHyperscript2.default)(_lines2.default), (0, _reactHyperscript2.default)('h1', { id: 'name-jack' }, 'Jack'), (0, _reactHyperscript2.default)('div', { className: 'jk-info' }, [(0, _reactHyperscript2.default)('h1', 'Ketcham'), (0, _reactHyperscript2.default)('p', 'code, photography, music, design'), (0, _reactHyperscript2.default)('ul', { className: 'jk-list' }, [(0, _reactHyperscript2.default)('li', [(0, _reactHyperscript2.default)('a', { href: 'https://github.com/jketcham', className: 'jk-link', target: '_blank' }, 'GitHub')]), (0, _reactHyperscript2.default)('li', [(0, _reactHyperscript2.default)('a', { href: 'https://twitter.com/_jket', className: 'jk-link', target: '_blank' }, 'Twitter')]), (0, _reactHyperscript2.default)('li', [(0, _reactHyperscript2.default)('a', { href: 'https://www.flickr.com/photos/jackketcham', className: 'jk-link', target: '_blank' }, 'Flickr')])]), (0, _reactHyperscript2.default)('a', { href: 'mailto:jack@jackketcham.com' }, 'Email')])])])]);
 	    }
 	  }]);
 
@@ -24837,13 +24838,84 @@
 /* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactHyperscript = __webpack_require__(2);
+
+	var _reactHyperscript2 = _interopRequireDefault(_reactHyperscript);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	function getRandomInt(min, max) {
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	var Lines = (function (_React$Component) {
+	  _inherits(Lines, _React$Component);
+
+	  function Lines(props) {
+	    _classCallCheck(this, Lines);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Lines).call(this, props));
+
+	    _this.randomAngles = _this.randomAngles.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(Lines, [{
+	    key: 'randomAngles',
+	    value: function randomAngles() {
+	      var lines = [];
+
+	      for (var i = 0; i < getRandomInt(3, 6); i++) {
+	        var style = {
+	          width: getRandomInt(100, 500) + 'px',
+	          transform: 'rotate(' + getRandomInt(-180, 180) + 'deg) translateY(' + getRandomInt(-100, 100) + 'px)',
+	          animation: 'spin-' + getRandomInt(1, 5) + ' ' + getRandomInt(150, 500) + 's infinite'
+	        };
+
+	        var line = (0, _reactHyperscript2.default)('div', { className: 'line', style: style, key: 'line-' + i });
+
+	        lines.push(line);
+	      }
+
+	      return lines;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return (0, _reactHyperscript2.default)('div', { className: 'lines' }, [this.randomAngles()]);
+	    }
+	  }]);
+
+	  return Lines;
+	})(_react2.default.Component);
+
+	module.exports = Lines;
+
+/***/ },
+/* 217 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(217);
+	var content = __webpack_require__(218);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(219)(content, {});
+	var update = __webpack_require__(220)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -24860,21 +24932,21 @@
 	}
 
 /***/ },
-/* 217 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(218)();
+	exports = module.exports = __webpack_require__(219)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "* {\n  font-family: sans-serif;\n  -webkit-font-smoothing: antialiased;\n}\n.root {\n  position: relative;\n}\n.jk-home {\n  width: 25%;\n  height: 25%;\n  overflow: auto;\n  margin: auto;\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n}\n.jk-list li {\n  line-height: 1.5;\n}\n", ""]);
+	exports.push([module.id, "* {\n  font-family: sans-serif;\n  -webkit-font-smoothing: antialiased;\n}\n::-moz-selection {\n  background-color: #FF6E03;\n  color: #fff;\n}\n::selection {\n  background-color: #FF6E03;\n  color: #fff;\n}\na {\n  text-decoration: none;\n  color: #FF6E03;\n  -webkit-transition: .25s;\n  transition: .25s;\n}\na:visited {\n  color: #FF6E03;\n}\na:hover {\n  color: #9E4300;\n}\nh1 {\n  font-size: 48px;\n}\n.root {\n  position: relative;\n}\n.jk-center {\n  width: 500px;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin: -70px 0 0 -170px;\n}\n#name-jack {\n  float: left;\n  position: relative;\n}\n.jk-info__container h1 {\n  margin: 0;\n}\n.jk-info {\n  display: inline-block;\n  margin-left: 12px;\n  position: relative;\n}\n.jk-list {\n  list-style: none;\n  padding-left: 0;\n}\n.jk-list li {\n  line-height: 1.5;\n}\n.line {\n  color: rgba(3, 160, 255, 0.45);\n  border: 1px solid;\n}\n@-webkit-keyframes float {\n  0% {\n    -webkit-transform: translateY(0) rotate(-90deg);\n            transform: translateY(0) rotate(-90deg);\n  }\n  50% {\n    -webkit-transform: translateY(20px) rotate(-90deg);\n            transform: translateY(20px) rotate(-90deg);\n  }\n  100% {\n    -webkit-transform: translateY(0) rotate(-90deg);\n            transform: translateY(0) rotate(-90deg);\n  }\n}\n@keyframes float {\n  0% {\n    -webkit-transform: translateY(0) rotate(-90deg);\n            transform: translateY(0) rotate(-90deg);\n  }\n  50% {\n    -webkit-transform: translateY(20px) rotate(-90deg);\n            transform: translateY(20px) rotate(-90deg);\n  }\n  100% {\n    -webkit-transform: translateY(0) rotate(-90deg);\n            transform: translateY(0) rotate(-90deg);\n  }\n}\n@-webkit-keyframes spin-1 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(5deg);\n            transform: rotate(5deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n@keyframes spin-1 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(5deg);\n            transform: rotate(5deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n@-webkit-keyframes spin-2 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(10deg);\n            transform: rotate(10deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n@keyframes spin-2 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(10deg);\n            transform: rotate(10deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n@-webkit-keyframes spin-3 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n@keyframes spin-3 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(-5deg);\n            transform: rotate(-5deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n@-webkit-keyframes spin-4 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(-10deg);\n            transform: rotate(-10deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n@keyframes spin-4 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(-10deg);\n            transform: rotate(-10deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n@-webkit-keyframes spin-5 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(-15deg);\n            transform: rotate(-15deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n@keyframes spin-5 {\n  0% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n  50% {\n    -webkit-transform: rotate(-15deg);\n            transform: rotate(-15deg);\n  }\n  100% {\n    -webkit-transform: rotate(inherit);\n            transform: rotate(inherit);\n  }\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 218 */
+/* 219 */
 /***/ function(module, exports) {
 
 	/*
@@ -24930,7 +25002,7 @@
 
 
 /***/ },
-/* 219 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
