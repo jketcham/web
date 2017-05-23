@@ -1,9 +1,11 @@
 {
-  "extends": "rackt",
-  "rules": {
-    "react/wrap-multilines": 2
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
   },
-  "plugins": [
-    "react"
-  ]
+  "rules": {
+    "react/forbid-prop-types": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+  }
 }
