@@ -17,7 +17,7 @@ func staticHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	var (
-		port = flag.Int("port", 8080, "Port to listen for requests")
+		port = flag.Int("port", 5555, "Port to listen for requests")
 	)
 	flag.Parse()
 

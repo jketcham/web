@@ -1,18 +1,16 @@
-'use strict';
+const h = require('react-hyperscript');
+const history = require('history/lib/createBrowserHistory');
+const React = require('react');
+const ReactDOM = require('react-dom');
+const ReactRouter = require('react-router');
+const Router = ReactRouter.Router;
+const IndexRoute = ReactRouter.IndexRoute;
+const Route = ReactRouter.Route;
 
-var h = require('react-hyperscript');
-var history = require('history/lib/createBrowserHistory');
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ReactRouter = require('react-router');
-var Router = ReactRouter.Router;
-var IndexRoute = ReactRouter.IndexRoute;
-var Route = ReactRouter.Route;
+const Root = require('./components/root');
+const Home = require('./components/home');
 
-var Root = require('./components/root');
-var Home = require('./components/home');
-
-var routes = (
+const routes = (
   h(Route, {path: "/", component: Root}, [
     h(IndexRoute, {component: Home})
   ])
